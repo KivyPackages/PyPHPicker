@@ -10,14 +10,14 @@ let package = Package(
 		.library(name: "PyPHPicker", targets: ["PyPHPicker"])
 	],
 	dependencies: [
-        .package(url: "https://github.com/py-swift/PySwiftKit", from: .init(311, 0, 0)),
-        .package(url: "https://github.com/KivySwiftPackages/PyFoundation", from: .init(311, 0, 0))
+        .package(url: "https://github.com/py-swift/PySwiftKit", from: .init(313, 0, 0)),
+        .package(url: "https://github.com/KivySwiftPackages/PyFoundation", from: .init(313, 0, 0))
 	],
 	targets: [
 		.target(
 			name: "PyPHPicker",
 			dependencies: [
-                .product(name: "SwiftonizeModules", package: "PySwiftKit"),
+                .product(name: "PySwiftKitBase", package: "PySwiftKit"),
                 "PyFoundation"
 			],
 			plugins: []
